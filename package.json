@@ -1,0 +1,50 @@
+{
+  "name": "gugogo",
+  "version": "1.0.5",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "real": "nodemon --watch * --exec electron .",
+    "dist-win": "electron-packager ./ bookApp --platform=win32 --arch=x64",
+    "dist-mac": "electron-builder"
+  },
+  "build": {
+    "appId": "com.booking.app",
+    "asar": true,
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^6.0.10"
+  },
+  "dependencies": {
+    "dns": "^0.2.2",
+    "http": "0.0.0",
+    "jquery": "^3.4.1",
+    "jsdom": "^15.1.1",
+    "nightmare": "^3.0.2",
+    "nodemon": "^1.19.2"
+  }
+}

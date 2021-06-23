@@ -1,0 +1,51 @@
+html, body
+{
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+#splash{
+    position:relative;
+    height: 100%;
+    width:100%;
+    margin-top: -4em;
+}
+
+#banner{
+    position: absolute;
+    bottom: -56px;
+    right: 12px;
+}
+
+#logo{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #1e1c67; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    position:absolute;
+    left : 50%;
+    bottom : 100px;
+    
+}
+
+.failed{
+    position:absolute;
+    left : 35%;
+    bottom : 100px;
+}
+  
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Gugo Go</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <div class="container" style="margin-top: 1em;">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">FLIGHTS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">NOTIFICATIONS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">TIME</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="container" id="flight_login" style="display: block;">
+                    <div class="row">
+                        <div class="col-md-6 mx-auto">
+                            <p style="text-align: center">
+                                <img src="../assets/logo.png" style="width: 70%;" /><br>
+                                <b style="color: #1e1c67;">Flight Login</b>
+                            </p>
+                            <div class="form-group">
+                                <input class="form-control" id="fight_user_email" type="email" placeholder="Enter username" style="margin-bottom: 10px;" />
+                                <input class="form-control" id="fight_user_pwd" type="password" placeholder="Enter password" style="margin-bottom: 20px;"/>
+                                <button class="btn btn-warning form-control" style="background-color: #1e1c67;color:#fff;border-color:#1e1c67;" onclick="onFightClick()">LOGIN</button>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="footer">
+                        <img class="left-img" src="../assets/banner.png" style="display: block" />
+                    </div>
+                </div>
+                <div class="container" id="flight_broswer" style="display: none">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- preload="./test.js" -->
+                            <!-- scrolling="no" -->
+                            <!-- is="x-frame-bypass" -->
+                            <iframe id="webview" src="https://consolidatorapp.tts.com" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="container" id="notify_login">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <iframe id="webview1" src="https://vrsyvwbknl.guzogo.com" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="container" id="time_view">
+                    <div class="row">
+                        <div class="col-5 text-center" style="font-size: 32px;">
+                            <p>24hr Time</p>
+                        </div>
+                        <div class="col-7 text-center" style="font-size: 32px;">
+                            <p>Local Time</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-5 text-center">
+                            <input class="form-control text-center" id="arrival-full-time" value="22:45"/>
+                        </div>
+                        <div class="col-7 text-center">
+                            <div class="input-group">
+                                <input type="text" id="arrival-local-time" class="form-control text-center" placeholder="ከምሽቱ 4:45" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn" id="arrival-clipboard" style="background-color: #332d61;color:#fff;" type="button">COPY</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-5 text-center">
+                            <input class="form-control text-center" id="arrival-full-time1" value="22:45"/>
+                        </div>
+                        <div class="col-7 text-center">
+                            <div class="input-group">
+                                <input type="text" id="arrival-local-time1" class="form-control text-center" placeholder="ከምሽቱ 4:45" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn" id="arrival-clipboard1" style="background-color: #332d61;color:#fff;" type="button">COPY</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-5 text-center">
+                            <input class="form-control text-center" id="arrival-full-time2" value="22:45"/>
+                        </div>
+                        <div class="col-7 text-center">
+                            <div class="input-group">
+                                <input type="text" id="arrival-local-time2" class="form-control text-center" placeholder="ከምሽቱ 4:45" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn" id="arrival-clipboard2" style="background-color: #332d61;color:#fff;" type="button">COPY</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-5 text-center">
+                            <input class="form-control text-center" id="arrival-full-time3" value="22:45"/>
+                        </div>
+                        <div class="col-7 text-center">
+                            <div class="input-group">
+                                <input type="text" id="arrival-local-time3" class="form-control text-center" placeholder="ከምሽቱ 4:45" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn" id="arrival-clipboard3" style="background-color: #332d61;color:#fff;" type="button">COPY</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <img class="right-img" src="../assets/logo.png" />
+                        <img class="left-img" src="../assets/banner.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.jQuery = window.$ = $ = require('jquery')
+    </script>
+    <!-- <script src="../script/jquery.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+    <script src="../script/main.js"></script>
+  </body>
+</html>
